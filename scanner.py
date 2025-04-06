@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# ------------------------------------------------------
+# Web Vulnerability Scanner - Developed by Asghar Mashayekhi
+# Date: April 2025
+# Github: https://github.com/asgharmashayekhi/web-vuln_scanner.git
+# ------------------------------------------------------
+
+
 """
 Web Vulnerability Scanner.
 This is the main module that orchestrates the scanning process.
@@ -25,7 +32,8 @@ from utils.report_generator import ReportGenerator
 
 print("="*60)
 print(" Web Vulnerability Scanner v1.0")
-print(" Developed by Asghar Moshayekhi")
+print(" Developed by Asghar Mashayekhi")
+print("Github: https://github.com/asgharmashayekhi/web-vuln_scanner.git")
 print("="*60)
 
 

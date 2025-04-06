@@ -1,5 +1,5 @@
-Developer: Asghar Moshayekhi
-Email: your_email@example.com
-GitHub: https://github.com/yourusername
+Developer: Asghar Mashayekhi
+Email: dallvllon@gmail.com
+GitHub: https://github.com/asgharmashayekhi/web-vuln_scanner.git
 Project: Web Vulnerability Scanner
 Created: April 2025

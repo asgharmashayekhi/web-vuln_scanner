@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# ------------------------------------------------------
+# Web Vulnerability Scanner - Developed by Asghar Mashayekhi
+# Date: April 2025
+# Github: https://github.com/asgharmashayekhi/web-vuln_scanner.git
+# ------------------------------------------------------
+
+
 """
 Web Vulnerability Scanner Example.
 
