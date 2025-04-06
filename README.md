@@ -4,11 +4,11 @@ A modular, Python-based web vulnerability scanner designed to detect common secu
 
 ## ScreenShot
 
-(https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/tsting_app.png?raw=true)
-(https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_1.png?raw=true)
-(https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_2.png?raw=true)
-(https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_3.png?raw=true)
-(https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_4.png?raw=true)
+<p align="center"><img src"https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/tsting_app.png?raw=true" with="400"></p>
+<p align="center"><img src"https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_1.png?raw=true" with="400"></p>
+<p align="center"><img src"https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_2.png?raw=true" with="400"></p>
+<p align="center"><img src"https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_3.png?raw=true" with="400"></p>
+<p align="center"><img src"https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_4.png?raw=true" with="400"></p>
 
 ## Features
 
