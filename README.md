@@ -120,7 +120,7 @@ This tool is intended for educational purposes and authorized security testing o
 ---
 ## 🧑‍💻 Developer Info
 
-| 📌 Developer        | 📅 Project Date | 📫 Contact Email                                | 🔗 GitHub Profile                                       |
-|--------------------|-----------------|--------------------------------------------------|--------------------------------------------------------|
-| Asghar Mashayekhi  | April 2025      | [dallvllon@gmail.com](mailto:dallvllon@gmail.com) | [asgharmashayekhi](https://github.com/asgharmashayekhi) |
+| Developer | Project Date | Contact | GitHub |
+|-----------|--------------|---------|--------|
+| ![Dev](https://img.shields.io/badge/Developer-Asghar%20Mashayekhi-blue?style=flat-square&logo=python) | ![Date](https://img.shields.io/badge/Date-April%202025-green?style=flat-square&logo=calendar) | [![Email](https://img.shields.io/badge/Email-dallvllon@gmail.com-red?style=flat-square&logo=gmail)](mailto:dallvllon@gmail.com) | [![GitHub](https://img.shields.io/badge/GitHub-asgharmashayekhi-black?style=flat-square&logo=github)](https://github.com/asgharmashayekhi) |
 
