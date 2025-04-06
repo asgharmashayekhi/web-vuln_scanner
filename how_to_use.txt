@@ -1,0 +1,150 @@
+Web Vulnerability Scanner - User Guide
+=====================================
+
+This guide will help you get started with the Web Vulnerability Scanner, a Python-based tool for detecting common web security vulnerabilities.
+
+Table of Contents:
+-----------------
+1. Installation
+2. Basic Usage
+3. Command Line Arguments
+4. Project Structure
+5. Proxy and Tor Integration
+6. HTML Reports
+7. Example Usage
+8. Security Notice
+
+1. Installation
+--------------
+Before using the scanner, you need to install its dependencies:
+
+    pip install -r requirements.txt
+
+This will install all required packages including:
+- requests: For making HTTP requests
+- beautifulsoup4: For HTML parsing
+- PySocks: For proxy support
+- stem: For Tor integration
+- fake-useragent: For user agent rotation
+- jinja2: For HTML report generation
+
+2. Basic Usage
+-------------
+The simplest way to run a scan is:
+
+    python scanner.py --url https://example.com
+
+This will:
+- Scan the specified URL for vulnerabilities
+- Generate an HTML report named 'vuln_report.html'
+- Use default settings for all other options
+
+3. Command Line Arguments
+------------------------
+The scanner supports the following command line arguments:
+
+Required:
+- --url: Target URL to scan (required)
+
+Optional:
+- --output: Output file for HTML report (default: vuln_report.html)
+- --proxy: Proxy server to use (e.g., socks5://127.0.0.1:9050 for Tor)
+- --scan-type: Specify scan types (options: sqli, xss, csrf, all) (default: all)
+- --threads: Number of threads to use for scanning (default: 5)
+- --timeout: Request timeout in seconds (default: 10)
+- --delay: Delay between requests in seconds (default: 1)
+- --user-agent-rotate: Enable User-Agent rotation
+- --verbose: Enable verbose output
+
+4. Project Structure
+-------------------
+The project is organized into the following structure:
+
+web_vuln_scanner/
+├── scanner.py           # Main scanner script
+├── example.py          # Example usage script
+├── requirements.txt    # Dependencies list
+├── tests/             # Scanner implementations
+│   ├── base_scanner.py    # Base scanner class
+│   ├── sqli_scanner.py    # SQL Injection scanner
+│   ├── xss_scanner.py     # Cross-Site Scripting scanner
+│   └── csrf_scanner.py    # CSRF scanner
+├── utils/             # Utility modules
+│   ├── proxy_handler.py   # Proxy/Tor handling
+│   └── report_generator.py # HTML report generation
+└── templates/         # HTML report templates
+    └── report_template.html
+
+5. Proxy and Tor Integration
+---------------------------
+To use a proxy or Tor:
+
+1. For regular HTTP/HTTPS proxy:
+   python scanner.py --url https://example.com --proxy http://proxy.example.com:8080
+
+2. For Tor:
+   - Make sure Tor is installed and running on your system
+   - Use the Tor SOCKS proxy (default port 9050):
+   python scanner.py --url https://example.com --proxy socks5://127.0.0.1:9050
+
+The scanner will automatically:
+- Route all requests through the specified proxy
+- Rotate IP addresses when using Tor
+- Handle proxy authentication if required
+
+6. HTML Reports
+--------------
+The scanner generates detailed HTML reports that include:
+- Scan summary and statistics
+- List of detected vulnerabilities
+- Severity levels and descriptions
+- Recommendations for fixing issues
+
+Reports are saved to:
+- Default location: vuln_report.html in the current directory
+- Custom location: Specify with --output argument
+
+7. Example Usage
+---------------
+Here's a complete example using a test website:
+
+    # Basic scan
+    python scanner.py --url http://testphp.vulnweb.com
+
+    # Advanced scan with all options
+    python scanner.py \
+        --url http://testphp.vulnweb.com \
+        --proxy socks5://127.0.0.1:9050 \
+        --scan-type sqli xss \
+        --output test_scan_report.html \
+        --user-agent-rotate \
+        --verbose
+
+    # Or run the example script
+    python example.py
+
+The example script will:
+- Scan the test website for SQL Injection and XSS vulnerabilities
+- Generate a report named 'example_scan_report.html'
+- Automatically open the report in your default web browser
+
+8. Security Notice
+-----------------
+IMPORTANT: This tool is designed for:
+- Educational purposes
+- Authorized security testing
+- Learning about web security vulnerabilities
+- Testing your own applications
+
+DO NOT use this tool to:
+- Scan websites without permission
+- Perform unauthorized security testing
+- Attack or compromise systems
+- Violate any laws or regulations
+
+The authors are not responsible for any misuse or damage caused by this tool. Always obtain proper authorization before scanning any website. 
+
+---
+📌 Developer: Asghar MAshayekhi  
+📅 Project Date: April 2025  
+📫 Contact: dallvllon@gmail.com

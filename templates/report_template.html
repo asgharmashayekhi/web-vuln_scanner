@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Vulnerability Scanner Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .summary {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 5px solid #2c3e50;
+        }
+        .vuln-section {
+            margin-bottom: 30px;
+        }
+        .vuln-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .high {
+            border-left: 5px solid #e74c3c;
+        }
+        .medium {
+            border-left: 5px solid #f39c12;
+        }
+        .low {
+            border-left: 5px solid #3498db;
+        }
+        .info {
+            border-left: 5px solid #2ecc71;
+        }
+        .severity-high {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .severity-medium {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        .severity-low {
+            color: #3498db;
+            font-weight: bold;
+        }
+        .severity-info {
+            color: #2ecc71;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Web Vulnerability Scanner Report</h1>
+        <p>Scan performed on: {{ scan_date }}</p>
+        <p>Developed by: Asghar Mashayekhi</p>
+    </div>
+
+    <div class="summary">
+        <h2>Scan Summary</h2>
+        <p><strong>Target URL:</strong> {{ target_url }}</p>
+        <p><strong>Scan Duration:</strong> {{ scan_duration }} seconds</p>
+        <p><strong>Total Vulnerabilities Found:</strong> {{ total_vulnerabilities }}</p>
+        <p><strong>Scan Types:</strong> {{ scan_types|join(', ') }}</p>
+        <table>
+            <tr>
+                <th>Severity</th>
+                <th>Count</th>
+            </tr>
+            <tr>
+                <td><span class="severity-high">High</span></td>
+                <td>{{ high_count }}</td>
+            </tr>
+            <tr>
+                <td><span class="severity-medium">Medium</span></td>
+                <td>{{ medium_count }}</td>
+            </tr>
+            <tr>
+                <td><span class="severity-low">Low</span></td>
+                <td>{{ low_count }}</td>
+            </tr>
+            <tr>
+                <td><span class="severity-info">Info</span></td>
+                <td>{{ info_count }}</td>
+            </tr>
+        </table>
+    </div>
+
+    {% if vulnerabilities %}
+    <div class="vuln-section">
+        <h2>Vulnerabilities Found</h2>
+        
+        {% for vuln_type, vulns in vulnerabilities.items() %}
+        <h3>{{ vuln_type }}</h3>
+        
+        {% for vuln in vulns %}
+        <div class="vuln-item {{ vuln.severity }}">
+            <h4>{{ vuln.title }}</h4>
+            <p><strong>URL:</strong> {{ vuln.url }}</p>
+            <p><strong>Severity:</strong> <span class="severity-{{ vuln.severity }}">{{ vuln.severity|capitalize }}</span></p>
+            <p><strong>Description:</strong> {{ vuln.description }}</p>
+            
+            {% if vuln.details %}
+            <p><strong>Details:</strong></p>
+            <code>{{ vuln.details }}</code>
+            {% endif %}
+            
+            {% if vuln.recommendation %}
+            <p><strong>Recommendation:</strong> {{ vuln.recommendation }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+        
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="vuln-section">
+        <h2>Vulnerabilities Found</h2>
+        <p>No vulnerabilities were detected during the scan.</p>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        <p>Generated by Web Vulnerability Scanner | {{ scan_date }}</p>
+        <p>Report prepared by: Asghar Mashayekhi</p>    </div>
+</body>
+</html> 
