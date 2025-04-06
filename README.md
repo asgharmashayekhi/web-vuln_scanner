@@ -118,7 +118,9 @@ This project is licensed under the MIT License (LICENSE).
 This tool is intended for educational purposes and authorized security testing only. Do not use it on websites or systems without explicit permission from the owner. The authors are not liable for any misuse or damage caused by this tool.
 
 ---
-📌 Developer: Asghar MAshayekhi  
-📅 Project Date: April 2025  
-📫 Contact: dallvllon@gmail.com
-GitHub: asgharmashayekhi
+## 🧑‍💻 Developer Info
+
+| 📌 Developer        | 📅 Project Date | 📫 Contact Email                                | 🔗 GitHub Profile                                       |
+|--------------------|-----------------|--------------------------------------------------|--------------------------------------------------------|
+| Asghar Mashayekhi  | April 2025      | [dallvllon@gmail.com](mailto:dallvllon@gmail.com) | [asgharmashayekhi](https://github.com/asgharmashayekhi) |
+
