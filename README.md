@@ -2,7 +2,13 @@
 
 A modular, Python-based web vulnerability scanner designed to detect common security vulnerabilities such as SQL Injection (SQLi), Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). This tool generates a detailed HTML report of findings and is built with extensibility in mind.
 
+## ScreenShot
 
+(https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/tsting_app.png?raw=true)
+(https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_1.png?raw=true)
+(https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_2.png?raw=true)
+(https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_3.png?raw=true)
+(https://github.com/asgharmashayekhi/web-vuln_scanner/blob/main/ScreenShot/Report_4.png?raw=true)
 
 ## Features
 
